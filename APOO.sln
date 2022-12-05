@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APOO", "APOO\APOO.csproj", "{A7DDA336-2802-4708-9C4C-68BC25B33742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{75544BF2-91AE-4BA2-9387-C674F34A5314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{BFFF412E-941A-40D5-960B-3BD3B444DF1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7DDA336-2802-4708-9C4C-68BC25B33742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DDA336-2802-4708-9C4C-68BC25B33742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DDA336-2802-4708-9C4C-68BC25B33742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DDA336-2802-4708-9C4C-68BC25B33742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75544BF2-91AE-4BA2-9387-C674F34A5314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75544BF2-91AE-4BA2-9387-C674F34A5314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75544BF2-91AE-4BA2-9387-C674F34A5314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75544BF2-91AE-4BA2-9387-C674F34A5314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFF412E-941A-40D5-960B-3BD3B444DF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFF412E-941A-40D5-960B-3BD3B444DF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFF412E-941A-40D5-960B-3BD3B444DF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFF412E-941A-40D5-960B-3BD3B444DF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F23AF31D-A40C-445D-B926-034AE9CB5A60}
+	EndGlobalSection
+EndGlobal
