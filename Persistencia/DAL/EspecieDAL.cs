@@ -17,7 +17,7 @@ namespace Persistencia.DAL
         {
             return context.Especies.OrderBy(b => b.Nome);
         }
-        public Especie ObterEspeciePorId(long id)
+        public Especie ObterEspeciePorId(int id)
         {
             return context.Especies.Where(c => c.Id == id).First();
         }
@@ -33,7 +33,7 @@ namespace Persistencia.DAL
             }
             context.SaveChanges();
         }
-        public Especie EliminarEspeciePorId(long id)
+        public Especie EliminarEspeciePorId(int id)
         {
             Especie especie = ObterEspeciePorId(id);
             context.Especies.Remove(especie);

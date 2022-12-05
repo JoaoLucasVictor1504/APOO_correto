@@ -20,13 +20,13 @@ namespace APOO.Controllers
         private EspecieServico especieServico = new EspecieServico();
 
         //Pega os detalhes do produto de acordo com o id, serve para diminuir a redundância na hora de mostrar vz
-        private ActionResult ObterVisaoPetPorId(long? id)
+        private ActionResult ObterVisaoPetPorId(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pet pet = petServico.ObterPetPorId(long? id);
+            Pet pet = petServico.ObterPetPorId((int) id);
             if (pet == null)
             {
                 return HttpNotFound();

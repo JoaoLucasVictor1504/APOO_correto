@@ -14,14 +14,14 @@ namespace APOO.Controllers
     public class VeterinarioController : Controller
     {
         private VeterinarioServico veterinarioServico = new VeterinarioServico();
-        private ActionResult ObterVisaoVeterinarioPorId(long? id)
+        private ActionResult ObterVisaoVeterinarioPorId(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(
                 HttpStatusCode.BadRequest);
             }
-            Veterinario veterinario = veterinarioServico.ObterVeterinarioPorId((long)id);
+            Veterinario veterinario = veterinarioServico.ObterVeterinarioPorId((int)id);
             if (veterinario == null)
             {
                 return HttpNotFound();
@@ -64,7 +64,7 @@ namespace APOO.Controllers
             return GravarVeterinario(veterinario);
         }
         // GET: Edit
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(int? id)
         {
             return ObterVisaoVeterinarioPorId(id);
         }

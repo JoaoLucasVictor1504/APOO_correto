@@ -15,7 +15,7 @@ namespace APOO.Servico
         {
             return consultaDAL.ObterConsultasClassificadasPorData();
         }
-        public Consulta ObterConsultaPorId(long id)
+        public Consulta ObterConsultaPorId(int id)
         {
             return consultaDAL.ObterConsultaPorId(id);
         }
@@ -23,7 +23,7 @@ namespace APOO.Servico
         {
             consultaDAL.GravarConsulta(consulta);
         }
-        public Consulta EliminarConsultaPorId(long id)
+        public Consulta EliminarConsultaPorId(int id)
         {
             return consultaDAL.EliminarConsultaPorId(id);
         }

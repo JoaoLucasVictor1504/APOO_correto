@@ -19,14 +19,14 @@ namespace APOO.Controllers
     public class ClienteController : Controller
     {
         private ClienteServico clienteServico = new ClienteServico();
-        private ActionResult ObterVisaoClientePorId(long? id)
+        private ActionResult ObterVisaoClientePorId(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(
                 HttpStatusCode.BadRequest);
             }
-            Cliente cliente = clienteServico.ObterClientePorId((long)id);
+            Cliente cliente = clienteServico.ObterClientePorId((int)id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -69,7 +69,7 @@ namespace APOO.Controllers
             return GravarCliente(cliente);
         }
         // GET: Edit
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(int? id)
         {
             return ObterVisaoClientePorId(id);
         }

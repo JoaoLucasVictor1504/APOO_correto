@@ -16,7 +16,7 @@ namespace APOO.Servico
         {
             return clienteDAL.ObterClientesClassificadosPorNome();
         }
-        public Cliente ObterClientePorId(long id)
+        public Cliente ObterClientePorId(int id)
         {
             return clienteDAL.ObterClientePorId(id);
         }
@@ -24,7 +24,7 @@ namespace APOO.Servico
         {
             clienteDAL.GravarCliente(cliente);
         }
-        public Cliente EliminarClientePorId(long id)
+        public Cliente EliminarClientePorId(int id)
         {
             Cliente cliente = clienteDAL.ObterClientePorId(id);
             clienteDAL.EliminarClientePorId(id);

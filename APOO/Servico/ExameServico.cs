@@ -15,7 +15,7 @@ namespace APOO.Servico
         {
             return exameDAL.ObterExamesClassificadosPorDesc();
         }
-        public Exame ObterExamePorId(long id)
+        public Exame ObterExamePorId(int id)
         {
             return exameDAL.ObterExamePorId(id);
         }
@@ -23,7 +23,7 @@ namespace APOO.Servico
         {
             exameDAL.GravarExame(exame);
         }
-        public Exame EliminarExamePorId(long id)
+        public Exame EliminarExamePorId(int id)
         {
             Exame exame = exameDAL.ObterExamePorId(id);
             exameDAL.EliminarExamePorId(id);

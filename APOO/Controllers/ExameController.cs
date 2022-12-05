@@ -23,14 +23,14 @@ namespace APOO.Controllers
     public class ExameController : Controller
     {
         private ExameServico exameServico = new ExameServico();
-        private ActionResult ObterVisaoExamePorId(long? id)
+        private ActionResult ObterVisaoExamePorId(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(
                 HttpStatusCode.BadRequest);
             }
-            Exame exame = exameServico.ObterExamePorId((long)id);
+            Exame exame = exameServico.ObterExamePorId((int)id);
             if (exame == null)
             {
                 return HttpNotFound();
@@ -73,7 +73,7 @@ namespace APOO.Controllers
             return GravarExame(exame);
         }
         // GET: Edit
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(int? id)
         {
             return ObterVisaoExamePorId(id);
         }
@@ -86,14 +86,14 @@ namespace APOO.Controllers
         }
 
         // GET: Delete
-        public ActionResult Delete(long? id)
+        public ActionResult Delete(int? id)
         {
             return ObterVisaoExamePorId(id);
         }
         // POST: Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(long id)
+        public ActionResult Delete(int id)
         {
             try
             {

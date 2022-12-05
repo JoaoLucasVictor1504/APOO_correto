@@ -28,10 +28,10 @@ namespace Persistencia.Context
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Pet> Pets { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+           // base.OnModelCreating(modelBuilder);
+          //  modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+       // }
     }
 }

@@ -16,7 +16,7 @@ namespace APOO.Servico
         {
             return veterinarioDAL.ObterVeterinariosClassificadosPorNome();
         }
-        public Veterinario ObterVeterinarioPorId(long id)
+        public Veterinario ObterVeterinarioPorId(int id)
         {
             return veterinarioDAL.ObterVeterinarioPorId(id);
         }
@@ -24,7 +24,7 @@ namespace APOO.Servico
         {
             veterinarioDAL.GravarVeterinario(veterinario);
         }
-        public Veterinario EliminarVeterinarioPorId(long id)
+        public Veterinario EliminarVeterinarioPorId(int id)
         {
             Veterinario veterinario = veterinarioDAL.ObterVeterinarioPorId(id);
             veterinarioDAL.EliminarVeterinarioPorId(id);

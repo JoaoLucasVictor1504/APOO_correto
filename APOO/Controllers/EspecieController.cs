@@ -20,14 +20,14 @@ namespace APOO.Controllers
     public class EspecieController : Controller
     {
         private EspecieServico especieServico = new EspecieServico();
-        private ActionResult ObterVisaoEspeciePorId(long? id)
+        private ActionResult ObterVisaoEspeciePorId(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(
                 HttpStatusCode.BadRequest);
             }
-            Especie especie = especieServico.ObterEspeciePorId((long)id);
+            Especie especie = especieServico.ObterEspeciePorId((int)id);
             if (especie == null)
             {
                 return HttpNotFound();
@@ -70,7 +70,7 @@ namespace APOO.Controllers
             return GravarEspecie(especie);
         }
         // GET: Edit
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(int? id)
         {
             return ObterVisaoEspeciePorId(id);
         }
@@ -83,14 +83,14 @@ namespace APOO.Controllers
         }
 
         // GET: Delete
-        public ActionResult Delete(long? id)
+        public ActionResult Delete(int? id)
         {
             return ObterVisaoEspeciePorId(id);
         }
         // POST: Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(long id)
+        public ActionResult Delete(int id)
         {
             try
             {

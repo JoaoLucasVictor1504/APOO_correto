@@ -17,7 +17,7 @@ namespace Persistencia.DAL
         {
             return context.Exames.OrderBy(b => b.Descricao);
         }
-        public Exame ObterExamePorId(long id)
+        public Exame ObterExamePorId(int id)
         {
             return context.Exames.Where(c => c.Id == id).First();
         }
@@ -33,7 +33,7 @@ namespace Persistencia.DAL
             }
             context.SaveChanges();
         }
-        public Exame EliminarExamePorId(long id)
+        public Exame EliminarExamePorId(int id)
         {
             Exame exame = ObterExamePorId(id);
             context.Exames.Remove(exame);

@@ -16,7 +16,7 @@ namespace Persistencia.DAL
         {
             return context.Veterinarios.OrderBy(b => b.Nome);
         }
-        public Veterinario ObterVeterinarioPorId(long id)
+        public Veterinario ObterVeterinarioPorId(int id)
         {
             return context.Veterinarios.Where(f => f.Id == id).Include("Consultas.Veterinario").First();
         }
@@ -32,7 +32,7 @@ namespace Persistencia.DAL
             }
             context.SaveChanges();
         }
-        public Veterinario EliminarVeterinarioPorId(long id)
+        public Veterinario EliminarVeterinarioPorId(int id)
         {
             Veterinario veterinario = ObterVeterinarioPorId(id);
             context.Veterinarios.Remove(veterinario);

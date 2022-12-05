@@ -15,7 +15,7 @@ namespace APOO.Servico
         {
             return especieDAL.ObterEspeciesClassificadasPorNome();
         }
-        public Especie ObterEspeciePorId(long id)
+        public Especie ObterEspeciePorId(int id)
         {
             return especieDAL.ObterEspeciePorId(id);
         }
@@ -23,7 +23,7 @@ namespace APOO.Servico
         {
             especieDAL.GravarEspecie(especie);
         }
-        public Especie EliminarEspeciePorId(long id)
+        public Especie EliminarEspeciePorId(int id)
         {
             Especie especie = especieDAL.ObterEspeciePorId(id);
             especieDAL.EliminarEspeciePorId(id);
