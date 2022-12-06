@@ -9,7 +9,7 @@ namespace Modelo.Seres_Vivos
 {
     public class Especie
     {
-        public int Id { get; set; }
+        public int EspecieId { get; set; }
         public string Nome { get; set; }
         public IList<Pet> Pets { get; set; }
     }

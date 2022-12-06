@@ -14,7 +14,7 @@ namespace APOO.Servico
         {
             return petDAL.ObterPetsClassificadosPorNome();
         }
-        public Pet ObterPetPorId(int id)
+        public Pet ObterPetPorId(long id)
         {
             return petDAL.ObterPetPorId(id);
         }
@@ -22,7 +22,7 @@ namespace APOO.Servico
         {
             petDAL.GravarPet(pet);
         }
-        public Pet EliminarPetPorId(int id)
+        public Pet EliminarPetPorId(long id)
         {
             return petDAL.EliminarPetPorId(id);
         }

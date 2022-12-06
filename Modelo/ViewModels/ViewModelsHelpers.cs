@@ -6,8 +6,7 @@ using Modelo.Trabalhos;
 using Modelo.Pessoas;
 using Modelo.Seres_Vivos;
 
-
-namespace APOO.Models.ViewModels
+namespace Modelo.ViewModels
 {
     public static class ViewModelHelpers
     {

@@ -19,11 +19,11 @@ namespace Persistencia.DAL
         }
         public Especie ObterEspeciePorId(int id)
         {
-            return context.Especies.Where(c => c.Id == id).First();
+            return context.Especies.Where(c => c.EspecieId == id).First();
         }
         public void GravarEspecie(Especie especie)
         {
-            if (especie.Id == 0)
+            if (especie.EspecieId == 0)
             {
                 context.Especies.Add(especie);
             }

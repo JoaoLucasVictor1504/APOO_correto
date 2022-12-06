@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Modelo.Trabalhos;
-using APOO.Models.ViewModels;
+using Modelo.ViewModels;
 using Persistencia.Context;
 using System.Collections.Generic;
 using System.Data;
@@ -15,6 +15,7 @@ using System.Net;
 using System.Runtime.Remoting.Contexts;
 using System.Web.Services.Description;
 using Modelo.Seres_Vivos;
+using System.Collections;
 
 namespace APOO.Controllers
 {
@@ -38,7 +39,7 @@ namespace APOO.Controllers
                 });
             }
 
-            return examesvinculados;
+            return (ICollection<ExameVinculado>)(examesvinculados as IEnumerable);
         }
 
         private void AddOrUpdateExames(Consulta consulta, IEnumerable<ExameVinculado> examesvinculados)

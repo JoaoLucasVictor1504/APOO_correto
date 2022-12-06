@@ -200,6 +200,10 @@
     <Compile Include="Seres_Vivos\Pet.cs" />
     <Compile Include="Trabalhos\Consulta.cs" />
     <Compile Include="Trabalhos\Exame.cs" />
+    <Compile Include="ViewModels\ConsultaViewModel.cs" />
+    <Compile Include="ViewModels\ExameVIewModel.cs" />
+    <Compile Include="ViewModels\ExameVinculado.cs" />
+    <Compile Include="ViewModels\ViewModelsHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

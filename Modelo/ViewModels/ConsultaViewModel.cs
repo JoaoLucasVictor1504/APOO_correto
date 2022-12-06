@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using APOO.Models;
 using System;
 using System.Linq;
 using System.Web;
@@ -9,7 +8,7 @@ using Modelo.Trabalhos;
 using Modelo.Pessoas;
 using Modelo.Seres_Vivos;
 
-namespace APOO.Models.ViewModels
+namespace Modelo.ViewModels
 {
     public class ConsultaViewModel
     {
@@ -24,8 +23,9 @@ namespace APOO.Models.ViewModels
         public DateTime data_hora { get; set; }
         public virtual ICollection<ExameVinculado> Exames { get; set; }
         public int? PetId { get; set; }
-        public int? VeterinarioId { get; set; }
         public Pet Pet { get; set; }
+        public int? VeterinarioId { get; set; }
+
         public Veterinario Veterinario { get; set; }
     }
 }

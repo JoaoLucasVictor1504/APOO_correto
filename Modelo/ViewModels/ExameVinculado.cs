@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace APOO.Models.ViewModels
+namespace Modelo.ViewModels
 {
     public class ExameVinculado
     {
