@@ -5,11 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using APOO.Servico;
 using Persistencia.DAL;
+using Persistencia.Context;
 using Modelo.Seres_Vivos;
 using Modelo.Pessoas;
 using Modelo.Trabalhos;
+using Modelo.ViewModels;
 using System.Net;
-using Persistencia.Context;
 
 namespace APOO.Controllers
 {
@@ -35,17 +36,13 @@ namespace APOO.Controllers
 
         private ActionResult GravarPet(Pet pet)
         {
-            try
+
             {
                 if (ModelState.IsValid)
                 {
                     petServico.GravarPet(pet);
                     return RedirectToAction("Index");
                 }
-                return View(pet);
-            }
-            catch
-            {
                 return View(pet);
             }
         }
@@ -59,7 +56,7 @@ namespace APOO.Controllers
             ViewBag.ClienteId = new SelectList(clienteServico.ObterClientesClassificadosPorNome(),
                  "Id", "Nome");
             ViewBag.EspecieId = new SelectList(especieServico.ObterEspeciesClassificadasPorNome(),
-            "Id", "Nome");
+            "EspecieId", "Nome");
             return View();
         }
 
@@ -70,7 +67,7 @@ namespace APOO.Controllers
             ViewBag.ClienteId = new SelectList(clienteServico.ObterClientesClassificadosPorNome(),
                 "Id", "Nome");
             ViewBag.EspecieId = new SelectList(especieServico.ObterEspeciesClassificadasPorNome(),
-            "Id", "Nome");
+            "EspecieId", "Nome");
             return GravarPet(pet);
         }
 
@@ -79,7 +76,7 @@ namespace APOO.Controllers
             ViewBag.ClienteId = new SelectList(clienteServico.ObterClientesClassificadosPorNome(),
                 "Id", "Nome");
             ViewBag.EspecieId = new SelectList(especieServico.ObterEspeciesClassificadasPorNome(),
-            "Id", "Nome");
+            "EspecieId", "Nome");
             return ObterVisaoPetPorId(id);
         }
 

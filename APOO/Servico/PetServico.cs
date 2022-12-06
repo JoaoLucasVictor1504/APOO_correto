@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Modelo.Pessoas;
 using Modelo.Seres_Vivos;
+using Persistencia.Context;
 using Persistencia.DAL;
-
 namespace APOO.Servico
 {
     public class PetServico

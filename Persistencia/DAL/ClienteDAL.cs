@@ -16,7 +16,7 @@ namespace Persistencia.DAL
         {
             return context.Clientes.OrderBy(b => b.Nome);
         }
-        public Cliente ObterClientePorId(int id)
+        public Cliente ObterClientePorId(long id)
         {
             return context.Clientes.Where(f => f.Id == id).Include("Pets.Cliente").First();
         }
@@ -32,7 +32,7 @@ namespace Persistencia.DAL
             }
             context.SaveChanges();
         }
-        public Cliente EliminarClientePorId(int id)
+        public Cliente EliminarClientePorId(long id)
         {
             Cliente cliente = ObterClientePorId(id);
             context.Clientes.Remove(cliente);

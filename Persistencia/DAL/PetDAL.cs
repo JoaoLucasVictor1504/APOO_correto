@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelo.Pessoas;
 using Modelo.Seres_Vivos;
+using Modelo.Trabalhos;
 using System.Data.Entity;
+
 
 namespace Persistencia.DAL
 {
